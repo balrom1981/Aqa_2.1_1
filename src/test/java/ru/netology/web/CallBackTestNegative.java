@@ -43,7 +43,8 @@ class CallBackTestNegative {
         $("[data-test-id=agreement]").click();
         $("[type=button]").click();
         $("[data-test-id=phone] [class=input__sub]")
-                .shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
+                .shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, " +
+                        "например, +79012345678."));
     }
 
     @Test
@@ -61,7 +62,8 @@ class CallBackTestNegative {
         $("[data-test-id=phone] input").setValue("+79270000000");
         $("[type=button]").click();
         $("[data-test-id=agreement].input_invalid .checkbox__text")
-                .shouldHave(exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных " +
-                        "и разрешаю сделать запрос в бюро кредитных историй"));
+                .shouldHave(exactText("Я соглашаюсь с условиями обработки и использования моих " +
+                        "персональных данных и разрешаю сделать " +
+                        "запрос в бюро кредитных историй"));
     }
 }
